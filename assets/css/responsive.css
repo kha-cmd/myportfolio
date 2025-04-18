@@ -1,0 +1,257 @@
+/* ======================
+   #RESPONSIVE DESIGN
+   ====================== */
+
+/* Large Desktop (1200px and below) */
+@media (max-width: 1200px) {
+  .max-width {
+    padding: 0 3rem;
+  }
+
+  .home-content .text-2 {
+    font-size: 3.25rem;
+  }
+
+  .about-content {
+    gap: 2rem;
+  }
+}
+
+/* Tablet Landscape (992px and below) */
+@media (max-width: 992px) {
+  /* Layout Adjustments */
+  .section {
+    padding: 5rem 0;
+  }
+
+  .about-content,
+  .skills-content,
+  .contact-content {
+    flex-direction: column;
+  }
+
+  /* Spacing */
+  .about-content .column.left,
+  .skills-content .column.left,
+  .contact-content .column.left {
+    margin-bottom: 3rem;
+  }
+
+  /* Grid Adjustments */
+  .education-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Form Elements */
+  .form-group.dual {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* Buttons */
+  .btn-secondary {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
+
+/* Tablet Portrait (768px and below) */
+@media (max-width: 768px) {
+  /* Base Layout */
+  .max-width {
+    padding: 0 2rem;
+  }
+
+  /* Mobile Navigation */
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+
+  .navbar .menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    z-index: 998;
+  }
+
+  .navbar .menu.active {
+    left: 0;
+  }
+
+  .navbar .menu li {
+    margin: 1.5rem 0;
+  }
+
+  .navbar .menu li a {
+    font-size: 1.5rem;
+    color: var(--dark);
+  }
+
+  /* Home Section */
+  .home-content .text-1 {
+    font-size: 1.1rem;
+  }
+
+  .home-content .text-2 {
+    font-size: 2.75rem;
+  }
+
+  .home-content .text-3 {
+    font-size: 1.75rem;
+  }
+
+  /* Section Titles */
+  .section-title h2 {
+    font-size: 2.25rem;
+  }
+
+  /* Education Grid */
+  .education-content {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact {
+    text-align: center;
+  }
+
+  .footer-links ul,
+  .footer-contact p {
+    justify-content: center;
+  }
+}
+
+/* Mobile Landscape (576px and below) */
+@media (max-width: 576px) {
+  /* Base Layout */
+  .max-width {
+    padding: 0 1.5rem;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+
+  /* Home Section */
+  .home-content .text-1 {
+    font-size: 1rem;
+  }
+
+  .home-content .text-2 {
+    font-size: 2.25rem;
+  }
+
+  .home-content .text-3 {
+    font-size: 1.5rem;
+  }
+
+  /* Section Titles */
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  /* About Section */
+  .about-content .text {
+    font-size: 1.5rem;
+  }
+
+  /* Buttons */
+  .cta-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-secondary {
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+
+  /* Back to Top Button */
+  .back-to-top {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+/* Mobile Portrait (480px and below) */
+@media (max-width: 480px) {
+  /* Home Section */
+  .home-content .text-2 {
+    font-size: 2rem;
+  }
+
+  .home-content .text-3 {
+    font-size: 1.25rem;
+  }
+
+  /* Section Titles */
+  .section-title h2 {
+    font-size: 1.75rem;
+  }
+
+  /* About Section */
+  .about-content .text {
+    font-size: 1.35rem;
+  }
+
+  /* Personal Info */
+  .personal-info div {
+    flex-direction: column;
+  }
+
+  .personal-info span {
+    margin-bottom: 0.25rem;
+  }
+
+  /* Contact Info */
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .info-item .icon {
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* Small Mobile Devices (380px and below) */
+@media (max-width: 380px) {
+  /* Base Layout */
+  .max-width {
+    padding: 0 1rem;
+  }
+
+  /* Home Section */
+  .home-content .text-2 {
+    font-size: 1.75rem;
+  }
+
+  .home-content a {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  /* Section Titles */
+  .section-title h2 {
+    font-size: 1.5rem;
+  }
+}
