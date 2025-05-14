@@ -1,31 +1,4 @@
 /* ======================
-   #GENERAL STYLES
-   ====================== */
-
-body {
-  font-family: "Arial", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: #f4f4f4;
-}
-
-section {
-  padding: 6rem 0;
-}
-
-.max-width {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 3rem;
-}
-
-.section-title h2 {
-  font-size: 3rem;
-  color: var(--dark);
-}
-
-/* ======================
    #RESPONSIVE DESIGN
    ====================== */
 
@@ -281,58 +254,4 @@ section {
   .section-title h2 {
     font-size: 1.5rem;
   }
-}
-
-/* ======================
-   #OTHER STYLES
-   ====================== */
-
-/* Ensure images fit well */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Responsive Menu Button */
-.menu-btn {
-  display: none;
-}
-
-/* Links */
-.nav-link {
-  text-decoration: none;
-  color: #333;
-  font-size: 1.25rem;
-  transition: all 0.3s;
-}
-
-.nav-link:hover {
-  color: #ff6347; /* Add a highlight color for hover */
-}
-
-.menu li {
-  list-style: none;
-}
-
-.menu a {
-  display: block;
-  padding: 1rem;
-}
-
-/* Back to Top Button */
-.back-to-top {
-  position: fixed;
-  right: 2rem;
-  bottom: 2rem;
-  background-color: #ff6347;
-  color: white;
-  padding: 1rem;
-  border-radius: 50%;
-  cursor: pointer;
-  display: none;
-  font-size: 1.5rem;
-}
-
-.back-to-top:hover {
-  background-color: #d9534f;
 }
