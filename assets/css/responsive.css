@@ -15,6 +15,10 @@
   .about-content {
     gap: 2rem;
   }
+
+  .projects-content {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
 }
 
 /* Tablet Landscape (992px and below) */
@@ -40,6 +44,20 @@
   /* Grid Adjustments */
   .education-content {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Project Cards */
+  .project-card {
+    flex-direction: column;
+  }
+
+  .gallery-main {
+    height: 250px;
+  }
+
+  .gallery-thumbnails img {
+    height: 70px;
   }
 
   /* Form Elements */
@@ -53,6 +71,11 @@
     margin-left: 0;
     margin-top: 1rem;
   }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Tablet Portrait (768px and below) */
@@ -64,15 +87,21 @@
 
   /* Mobile Navigation */
   .menu-btn {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
     z-index: 999;
+    transition: var(--transition);
   }
 
   .navbar .menu {
     position: fixed;
     top: 0;
     left: -100%;
-    width: 100%;
+    width: 80%;
+    max-width: 300px;
     height: 100vh;
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
@@ -81,6 +110,7 @@
     justify-content: center;
     transition: var(--transition);
     z-index: 998;
+    box-shadow: var(--shadow-lg);
   }
 
   .navbar .menu.active {
@@ -89,24 +119,42 @@
 
   .navbar .menu li {
     margin: 1.5rem 0;
+    width: 100%;
+    text-align: center;
   }
 
   .navbar .menu li a {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--dark);
+    display: block;
+    padding: 0.5rem 0;
   }
 
   /* Home Section */
+  .home {
+    padding-top: 6rem;
+    text-align: center;
+  }
+
   .home-content .text-1 {
     font-size: 1.1rem;
   }
 
   .home-content .text-2 {
     font-size: 2.75rem;
+    line-height: 1.2;
   }
 
   .home-content .text-3 {
     font-size: 1.75rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .cta-buttons {
+    justify-content: center;
   }
 
   /* Section Titles */
@@ -114,25 +162,40 @@
     font-size: 2.25rem;
   }
 
+  /* About Section */
+  .image-container {
+    width: 250px;
+    height: 350px;
+    margin: 0 auto;
+  }
+
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   /* Education Grid */
   .education-content {
     grid-template-columns: 1fr;
+  }
+
+  /* Skills Section */
+  .skill-item {
+    margin-bottom: 1.25rem;
   }
 
   /* Footer */
   .footer-content {
     grid-template-columns: 1fr;
     gap: 2rem;
-  }
-
-  .footer-about,
-  .footer-links,
-  .footer-contact {
     text-align: center;
   }
 
   .footer-links ul,
   .footer-contact p {
+    justify-content: center;
+  }
+
+  .footer-social {
     justify-content: center;
   }
 }
@@ -164,6 +227,11 @@
   /* Section Titles */
   .section-title h2 {
     font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-title::after {
+    bottom: -0.25rem;
   }
 
   /* About Section */
@@ -171,15 +239,28 @@
     font-size: 1.5rem;
   }
 
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
   /* Buttons */
   .cta-buttons {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .btn-secondary {
     margin-top: 1rem;
     margin-left: 0;
+  }
+
+  /* Project Cards */
+  .project-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .project-features ul {
+    padding-left: 1.25rem;
   }
 
   /* Back to Top Button */
@@ -213,15 +294,6 @@
     font-size: 1.35rem;
   }
 
-  /* Personal Info */
-  .personal-info div {
-    flex-direction: column;
-  }
-
-  .personal-info span {
-    margin-bottom: 0.25rem;
-  }
-
   /* Contact Info */
   .info-item {
     flex-direction: column;
@@ -230,6 +302,33 @@
 
   .info-item .icon {
     margin-bottom: 0.75rem;
+    margin-right: 0;
+  }
+
+  /* Project Thumbnails */
+  .gallery-thumbnails {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-thumbnails img {
+    height: 60px;
+  }
+
+  /* Social Icons Responsive Layout */
+  .social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  /* Mobile Layout - 2 rows */
+  @media (max-width: 576px) {
+    .social-icons {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
   }
 }
 
@@ -253,5 +352,16 @@
   /* Section Titles */
   .section-title h2 {
     font-size: 1.5rem;
+  }
+
+  /* Navigation */
+  .navbar .logo a {
+    font-size: 1.25rem;
+  }
+
+  /* Project Cards */
+  .project-tech span {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.6rem;
   }
 }
